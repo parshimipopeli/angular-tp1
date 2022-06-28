@@ -1,0 +1,31 @@
+<p>card works!</p>
+
+<p>carte-visite works!</p>
+
+
+<div *ngFor="let item of users" [hidden]="hidden">
+  <div *ngIf="item.id %2 -1" class="row">
+<div class="row">
+  <div class="background col-4" >
+    <div class="card-header">
+      {{ item.id }}
+      {{ item.name }}
+      <div class="card">
+        <div class="name">
+          {{ item.username }}
+        </div>
+        <div class="info">
+          <p>Site: {{ item.website }}</p>
+          <p>email: {{ item.email }}</p>
+          <p>Téléphone: {{ item.phone }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+</div>
+<button (click)="toogle()" class="btn btn-success"> {{ hidden == true ? 'Voir les cartes de visite'  :'cacher les cartes de visite'}}</button>
